@@ -1,0 +1,190 @@
+/* src/components/Form.css - Estilos para formulários */
+
+.form-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding-bottom: 40px;
+}
+
+.form-header {
+  padding: 24px 0;
+  margin-bottom: 40px;
+}
+
+.btn-back {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-4px);
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.form-icon {
+  font-size: 64px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.form-title {
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  color: #212121;
+  margin-bottom: 12px;
+}
+
+.form-subtitle {
+  font-size: 16px;
+  text-align: center;
+  color: #757575;
+  margin-bottom: 40px;
+}
+
+.modern-form {
+  margin-bottom: 32px;
+}
+
+.form-helper {
+  font-size: 12px;
+  color: #757575;
+  margin-top: 6px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.form-actions .btn {
+  flex: 1;
+}
+
+/* Spinner pequeno para botões */
+.spinner-small {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-right: 8px;
+}
+
+/* Toast de sucesso */
+.success-toast {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  background: linear-gradient(135deg, #4CAF50, #388E3C);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(76, 175, 80, 0.4);
+  font-weight: 600;
+  font-size: 16px;
+  z-index: 10000;
+  animation: slideIn 0.3s ease, slideOut 0.3s ease 1.7s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+}
+
+/* Dicas do formulário */
+.form-tips {
+  background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+  padding: 24px;
+  border-radius: 16px;
+  border-left: 4px solid #4CAF50;
+}
+
+.form-tips h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #212121;
+  margin-bottom: 12px;
+}
+
+.form-tips ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.form-tips li {
+  font-size: 14px;
+  color: #757575;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.form-tips li:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 32px 24px;
+    border-radius: 16px;
+  }
+
+  .form-title {
+    font-size: 24px;
+  }
+
+  .form-subtitle {
+    font-size: 14px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+
+  .success-toast {
+    left: 12px;
+    right: 12px;
+    top: 12px;
+  }
+}
